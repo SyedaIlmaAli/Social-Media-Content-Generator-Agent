@@ -6,10 +6,9 @@ from dotenv import load_dotenv
 from typing import List
 from pydantic import BaseModel
 from agents.run import RunConfig
+import streamlit as st
 
-
-load_dotenv()
-API_KEY = os.getenv("API_KEY")
+API_KEY = st.secrets["API_KEY"]
 
 external_client = AsyncOpenAI(
     api_key=API_KEY,

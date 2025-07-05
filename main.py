@@ -35,8 +35,6 @@ with col1:
     linkedin = st.checkbox("LinkedIn", value=True)
 with col2:
     instagram = st.checkbox("Instagram", value=True)
-with col3:
-    twitter = st.checkbox("Twitter")
 
 async def run_agent(video_id, query, platforms):
     try:
@@ -68,8 +66,6 @@ if st.button("Generate Content", type="primary", disabled=not video_id):
             selected_platforms.append("LinkedIn")
         if instagram:
             selected_platforms.append("Instagram")
-        if twitter:
-            selected_platforms.append("Twitter")
 
         if not selected_platforms:
             st.error("Please select at least one social media platform")
